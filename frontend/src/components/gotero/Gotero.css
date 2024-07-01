@@ -1,0 +1,185 @@
+.gotero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  max-width: 1000px;
+  margin: 40px auto;
+  background-color: rgba(255, 255, 255, 0.5); 
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 1); 
+}
+
+.gotero-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4vw;
+}
+
+.selector-gotero {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.selector-gotero button {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.selector-gotero button.active {
+  background-color: #00b31e;
+}
+
+.selector-gotero button:hover {
+  font-size: 1.2rem;
+  background-color: #0056b3;
+}
+
+.form-gotero {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.form-group input, .form-group select {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-calculate {
+  padding: 15px 30px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 2 ease;
+}
+
+.btn-calculate:hover {
+  background-color: #0056b3;
+}
+
+.drip-animacion-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 400px;
+  background: url('./goterum.png') no-repeat center center;
+  background-size: contain;
+  position: relative;
+}
+
+.drip-container {
+  position: relative;
+  width: 100px;
+  height: 300px;
+  margin: 20px auto;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.drip-body {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 10px;
+  height: 300px;
+  transform: translate(-50%, 0);
+}
+.drop {
+  position: absolute;
+  left: 50%;
+  width: 15px;
+  height: 20px;
+  background-color: rgba(51, 190, 255, 0.8); /* Color azul con más opacidad */
+  border-radius: 50%;
+  animation: drip infinite;
+  transform: translateX(-50%);
+}
+
+@keyframes drip {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+.resultado-animacion-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  gap: 20px
+}
+
+.resultado-container {
+  text-align: left;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  margin-bottom: 20px;
+  margin: 10px auto;
+}
+
+.tipo-gotero {
+  font-weight: bold;
+}
+
+@media (max-width: 1200px) {
+  .gotero-container {
+    width: 90%;
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .gotero-content {
+    flex-direction: column;
+    width: 90%;
+  }
+
+}
